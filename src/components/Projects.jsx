@@ -1,4 +1,8 @@
 export default function Projects() {
+  const openProject = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <section id="projects" style={styles.section}>
       <div style={styles.container}>
@@ -11,22 +15,43 @@ export default function Projects() {
 
         <div style={styles.grid}>
 
+          {/* Project 1 */}
           <div style={styles.card}>
-            <h3>Portfolio Website</h3>
+            <h3>ZahidRajper.com</h3>
             <p>A modern React portfolio website with clean UI design.</p>
-            <button style={styles.button}>View Code</button>
+
+            <button
+              style={styles.button}
+              onClick={() => openProject("https://zahidrajper.com")}
+            >
+              View Project
+            </button>
           </div>
 
+          {/* Project 2 */}
           <div style={styles.card}>
             <h3>Landing Page</h3>
             <p>Responsive landing page with modern UI and animations.</p>
-            <button style={styles.button}>View Code</button>
+
+            <button
+              style={styles.button}
+              onClick={() => openProject("aatifarbab.vercel.app")}
+            >
+              View Project
+            </button>
           </div>
 
+          {/* Project 3 */}
           <div style={styles.card}>
             <h3>Todo App</h3>
             <p>React todo app with add, delete and update features.</p>
-            <button style={styles.button}>View Code</button>
+
+            <button
+              style={styles.button}
+              onClick={() => openProject("https://your-todo-link.com")}
+            >
+              View Project
+            </button>
           </div>
 
         </div>
@@ -38,7 +63,7 @@ export default function Projects() {
 
 const styles = {
   section: {
-    minHeight: "100vh",   // 🔥 full screen like Skills
+    minHeight: "100vh",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -79,8 +104,6 @@ const styles = {
     border: "1px solid rgba(56, 189, 248, 0.2)",
     boxShadow: "0 10px 30px rgba(0,0,0,0.4)",
     textAlign: "left",
-    transition: "0.3s ease",
-    cursor: "pointer",
   },
 
   button: {
